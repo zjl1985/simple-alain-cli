@@ -111,26 +111,16 @@ export class UserLoginComponent implements OnDestroy {
     }
     // mock http
     this.loading = true;
-    this.http.get(`${this.gcs.globalPath}/xinhai/login/${this.userName.value}/${this.password.value}`).subscribe((result: any) => {
-      this.loading = false;
-      this.reuseTabService.clear();
-      if (result.failed === false) {
-        this.tokenService.set({
-          token: result.data.token,
-          name: result.data.name,
-          email: result.data.email,
-          id: result.data.id,
-          time: +new Date(),
-        });
-        // 重新获取 StartupService 内容，若其包括 User 有关的信息的话
-        this.startupSrv.load().then(() => this.router.navigate(['/']));
-        // 否则直接跳转
-        // this.router.navigate(['/']);
-      } else {
-        console.warn(result);
-        this.msg.error(result.msg);
-      }
-    });
+    if (this.userName.value !== 'admin') {
+      this.msg.error('没有该用户');
+      return;
+   }
+
+   if (this.password.value !== '111111') {
+      this.msg.error('密码错误');
+      return;
+   }
+   this.startupSrv.load().then(() => this.router.navigate(['/']));
   }
 
   // region: social
