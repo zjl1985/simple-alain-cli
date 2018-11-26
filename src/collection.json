@@ -1,0 +1,14 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "simple-alain-cli": {
+      "description": "A blank schematic.",
+      "factory": "./simple-alain-cli/index#gxCli"
+    },
+    "ng-new": {
+      "factory": "./simple-alain-cli/index#simpleAlainCli",
+      "description": "巴拉巴拉小魔仙~~",
+      "schema": "./simple-alain-cli/schema.json"
+    }
+  }
+}

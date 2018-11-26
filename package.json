@@ -1,0 +1,27 @@
+{
+  "name": "simple-alain-cli",
+  "version": "0.0.1",
+  "description": "高信ng的脚手架",
+  "author": "zhangjunlong<zjl198544@163.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://121.42.62.71:13530/xinhaiplatform/gx-cli.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && jasmine src/**/*_spec.js"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^6.1.0",
+    "@angular-devkit/schematics": "^6.1.0",
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "^8.0.31",
+    "jasmine": "^2.8.0",
+    "typescript": "^2.5.2"
+  }
+}

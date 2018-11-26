@@ -1,0 +1,28 @@
+{
+  "app": {
+    "name": "重点用能省端前置机",
+    "description": "重点用能省端前置机"
+  },
+  "user": {
+    "name": "管理员",
+    "avatar": "assets/img/head.jpg",
+    "email": "zjl198544@163.com"
+  },
+  "menu": [
+    {
+      "text": "主导航",
+      "i18n": "main_navigation",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "children": [
+        {
+          "text": "test",
+          "i18n": "test",
+          "icon": "anticon anticon-dashboard",
+          "link": "/province-server-state/view",
+          "shortcut": false
+        }
+      ]
+    }
+  ]
+}

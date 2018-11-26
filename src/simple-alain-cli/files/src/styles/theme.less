@@ -1,0 +1,45 @@
+// 可以通过 http://ng-alain.com/theme 生成相应的参数代码
+// @table-header-bg : #2aa0e8;
+@import "../assets/font/icon-font/iconfont.css";
+@import "../assets/font/laydate-icon/laydate-icon.css";
+
+
+
+@primary-color: #13C2C2;
+@alain-default-header-bg: #13C2C2;
+@alain-default-aside-nav-selected-text-color: #13C2C2;
+// @primary-color: #2aa0e8;
+// @aside-nav-selected-text-color: #108ee9;
+@header-bg: @primary-color;
+@even-tr-color: #FFF;
+@slider-margin: 10px 5px 0 0;
+@layout-header-background: #fff;
+@layout-body-background: #fff;
+@layout-sider-background: #fff;
+@layout-header-padding: 0 0;
+@table-padding-vertical: 8px;
+@table-padding-horizontal: 8px;
+.@{table-prefix-cls} {
+    &-thead>tr>th {
+        background: @header-bg;
+        text-align: center;
+        color: @heading-color-dark;
+    }
+}
+
+.ant-table-thead>tr>th.ant-table-column-sort {
+    background: @header-bg;
+}
+
+@scrollbar-thumb-color: @header-bg;
+
+
+/* 侧边栏菜单激活时文本颜色 */
+
+
+.jstree-default .jstree-search {
+    font-style: normal;
+    font-weight: bold;
+    color: #666;
+}
+

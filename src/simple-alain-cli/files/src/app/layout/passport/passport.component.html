@@ -1,0 +1,17 @@
+<div class="container" style="width: 100%;">
+  <div class="wrap">
+    <div class="top">
+      <div class="head">
+        <img class="logo" src="./assets/logo-color.svg">
+        <span class="title">{{loginInfo.title}}</span>
+      </div>
+      <div class="desc">{{loginInfo.desc}}</div>
+    </div>
+    <router-outlet></router-outlet>
+    <global-footer>
+      Copyright
+      <i nz-icon type="copyright"></i> 2018
+      <a href="http://www.gaoxiaoit.com/" target="_blank"> {{loginInfo.company}} </a>出品
+    </global-footer>
+  </div>
+</div>
