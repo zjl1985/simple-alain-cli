@@ -1,8 +1,8 @@
 {
     "name": "<%= utils.dasherize(name) %>",
     "version": "0.0.0",
-    "description": "重点用能在线监测企业端软件",
-    "author": "zhangjunlong",
+    "description": "",
+    "author": "",
     "engines": {
         "node": ">= 8.10.0",
         "npm": ">= 3.0.0"
