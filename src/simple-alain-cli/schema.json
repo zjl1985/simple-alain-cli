@@ -12,7 +12,7 @@
                 "$source": "argv",
                 "index": 0
             },
-            "x-prompt": "What name would you like to use for the project?"
+            "x-prompt": "给项目起个名字吧(也是目录的名字):"
         },
         "appRoot": {
             "description": "The path where new projects will be created.",

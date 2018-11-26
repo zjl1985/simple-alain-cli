@@ -8,21 +8,19 @@
     "avatar": "assets/img/head.jpg",
     "email": "zjl198544@163.com"
   },
-  "menu": [
-    {
-      "text": "主导航",
-      "i18n": "main_navigation",
-      "group": true,
-      "hideInBreadcrumb": true,
-      "children": [
-        {
-          "text": "test",
-          "i18n": "test",
-          "icon": "anticon anticon-dashboard",
-          "link": "/province-server-state/view",
-          "shortcut": false
-        }
-      ]
-    }
-  ]
+  "menu": [{
+    "text": "主导航",
+    "i18n": "main_navigation",
+    "group": true,
+    "hideInBreadcrumb": true,
+    "children": [{
+      "text": "demo",
+      "i18n": "demo",
+      "icon": {
+        "icon": "dashboard"
+      },
+      "link": "/demo/list",
+      "shortcut": false
+    }]
+  }]
 }

@@ -3,9 +3,16 @@
   "version": "0.0.1",
   "description": "高信ng的脚手架",
   "author": "zhangjunlong<zjl198544@163.com>",
+  "engines": {
+    "node": ">= 8.10.0",
+    "npm": ">= 3.0.0"
+  },
   "repository": {
     "type": "git",
-    "url": "http://121.42.62.71:13530/xinhaiplatform/gx-cli.git"
+    "url": "https://github.com/zjl1985/simple-alain-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/zjl1985/simple-alain-cli/issues"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -17,11 +24,11 @@
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
-    "@angular-devkit/core": "^6.1.0",
-    "@angular-devkit/schematics": "^6.1.0",
+    "@angular-devkit/core": "^0.8.7",
+    "@angular-devkit/schematics": "^0.8.7",
     "@types/jasmine": "^2.6.0",
     "@types/node": "^8.0.31",
     "jasmine": "^2.8.0",
-    "typescript": "^2.5.2"
+    "typescript": "^2.9.2"
   }
 }

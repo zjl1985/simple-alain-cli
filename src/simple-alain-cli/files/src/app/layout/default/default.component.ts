@@ -96,11 +96,6 @@ export class LayoutDefaultComponent
     @Inject(DOCUMENT) private doc: any,
     @Inject(DA_SERVICE_TOKEN) private tokenService: ITokenService,
   ) {
-    $(document).ajaxError(function(event, xhr, options, exc) {
-      if (xhr.status === 401) {
-        router.navigateByUrl(tokenService.login_url);
-      }
-    });
     iconSrv.addIcon(...ICONS);
     // scroll to top in change page
     router.events.subscribe(evt => {

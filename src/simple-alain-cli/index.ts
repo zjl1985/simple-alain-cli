@@ -4,23 +4,29 @@ import {
   url,
   mergeWith,
   template,
-  move
+  move,
+  SchematicsException
 } from "@angular-devkit/schematics";
 import { schemaOptions } from "./schema";
 import { strings } from "@angular-devkit/core";
+import { existsSync } from "fs";
 
-// You don't have to export the function as default. You can also have more than one rule factory
-// per file.
 export function simpleAlainCli(options: schemaOptions): Rule {
   const path = options.name;
-  return mergeWith(
-    apply(url("./files"), [
-      template({
-        utils: strings,
-        ...options,
-        dot: "."
-      }),
-      move(`./${path}`)
-    ])
-  );
+  return () => {
+    if (existsSync(`./${path}/`)) {
+      throw new SchematicsException("目录已经存在咯,换个名字吧");
+    }
+
+    return mergeWith(
+      apply(url("./files"), [
+        template({
+          utils: strings,
+          ...options,
+          dot: "."
+        }),
+        move(`./${path}`)
+      ])
+    );
+  };
 }

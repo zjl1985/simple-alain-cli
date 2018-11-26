@@ -21,7 +21,7 @@ let routes: Routes = [
     path: '',
     component: LayoutDefaultComponent,
     children: [
-      //{path: 'datacard', component: DataCardDemoComponent},
+      {path: 'demo',  loadChildren: './demo/demo.module#DemoModule'}
     ],
   },
   // passport
